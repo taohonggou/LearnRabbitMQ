@@ -16,7 +16,7 @@ namespace LearnRabbiMQ
             {
                 using (var channel=connection.CreateModel())
                 {
-
+                    //http://www.rabbitmq.com/tutorials/tutorial-one-dotnet.html
                 }
             }
         }
