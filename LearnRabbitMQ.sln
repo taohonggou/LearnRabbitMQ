@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbiMQ.Send", "LearnRabbitMQ.Send\LearnRabbiMQ.Send.csproj", "{EE5288D6-6D82-48FB-8F25-0D4AB5246F7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.Send", "LearnRabbitMQ.Send\LearnRabbitMQ.Send.csproj", "{EE5288D6-6D82-48FB-8F25-0D4AB5246F7F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.Receive", "LearnRabbitMQ.Receive\LearnRabbitMQ.Receive.csproj", "{6B5997A3-76D4-4FB1-B6BA-673F73464F86}"
 EndProject
