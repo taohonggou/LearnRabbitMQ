@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.Send", "Learn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.Receive", "LearnRabbitMQ.Receive\LearnRabbitMQ.Receive.csproj", "{6B5997A3-76D4-4FB1-B6BA-673F73464F86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.Tasks", "LearnRabbitMQ.Tasks\LearnRabbitMQ.Tasks.csproj", "{7F35DF86-F61E-4EB6-879F-89091EEE6D62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.Worker", "LearnRabbitMQ.Worker\LearnRabbitMQ.Worker.csproj", "{48692F71-344C-4A53-A49C-261C82CFC9DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{6B5997A3-76D4-4FB1-B6BA-673F73464F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B5997A3-76D4-4FB1-B6BA-673F73464F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B5997A3-76D4-4FB1-B6BA-673F73464F86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F35DF86-F61E-4EB6-879F-89091EEE6D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F35DF86-F61E-4EB6-879F-89091EEE6D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F35DF86-F61E-4EB6-879F-89091EEE6D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F35DF86-F61E-4EB6-879F-89091EEE6D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48692F71-344C-4A53-A49C-261C82CFC9DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48692F71-344C-4A53-A49C-261C82CFC9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48692F71-344C-4A53-A49C-261C82CFC9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48692F71-344C-4A53-A49C-261C82CFC9DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

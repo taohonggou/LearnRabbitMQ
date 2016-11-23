@@ -16,7 +16,7 @@ namespace LearnRabbitMQ.Receive
             using (var connect=factory.CreateConnection())
             using (var channel = connect.CreateModel())
             {
-                channel.QueueDeclare(queue: "Hello", durable: false, exclusive: false, autoDelete: false, arguments: null);
+                channel.QueueDeclare(queue: "durableChannelOne", durable: true, exclusive: false, autoDelete: false, arguments: null);
 
                 var consumer = new EventingBasicConsumer(channel);
 

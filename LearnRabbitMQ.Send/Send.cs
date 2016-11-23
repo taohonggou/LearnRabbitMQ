@@ -16,13 +16,13 @@ namespace LearnRabbiMQ.Send
             using (var channel = connection.CreateModel())
             {
                 //http://www.rabbitmq.com/tutorials/tutorial-one-dotnet.html
-                channel.QueueDeclare(queue: "Hello",
-                    durable: false,
+                channel.QueueDeclare(queue: "durableChannelOne",
+                    durable: true,
                     exclusive: false,
                     autoDelete: false,
                     arguments: null
                 );
-                string message = "Hello World";
+                string message = "测试durable";
                 var body = Encoding.UTF8.GetBytes(message);
 
                 channel.BasicPublish(exchange: "", routingKey: "Hello", basicProperties: null, body: body);
