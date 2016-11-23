@@ -7,8 +7,8 @@
     <ProjectGuid>{EE5288D6-6D82-48FB-8F25-0D4AB5246F7F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LearnRabbiMQ</RootNamespace>
-    <AssemblyName>LearnRabbiMQ</AssemblyName>
+    <RootNamespace>LearnRabbiMQ.Send</RootNamespace>
+    <AssemblyName>LearnRabbiMQ.Send</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
