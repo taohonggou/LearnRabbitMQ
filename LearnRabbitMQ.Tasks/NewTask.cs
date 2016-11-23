@@ -23,14 +23,14 @@ namespace LearnRabbitMQ.Tasks
                 using (var channel = connection.CreateModel())
                 {
                     channel.QueueDeclare(queue: "taskqueue", durable: true, exclusive: false, autoDelete: false, arguments: null);
-
+                    //channel.ExchangeDeclare("logs", "fanout");
                     //var message = GetMessage(args);
                     var body = Encoding.UTF8.GetBytes(message);
 
                     var properties = channel.CreateBasicProperties();
                     properties.Persistent = true;
 
-                    channel.BasicPublish(exchange: "", routingKey: "task_queue", basicProperties: properties, body: body);
+                    channel.BasicPublish(exchange: "", routingKey: "taskqueue", basicProperties: null, body: body);
 
                     Console.WriteLine("[x] Sent {0}", message);
                 }

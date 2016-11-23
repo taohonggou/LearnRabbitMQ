@@ -39,7 +39,7 @@ namespace LearnRabbitMQ.Worker
 
                     channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
                 };
-                channel.BasicConsume(queue: "task_queue", noAck: false, consumer: consumer);
+                channel.BasicConsume(queue: "taskqueue", noAck: false, consumer: consumer);
 
                 Console.WriteLine("Press [enter] to exit");
                 Console.ReadLine();
