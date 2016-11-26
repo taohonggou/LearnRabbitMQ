@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.Send", "LearnRabbitMQ.Send\LearnRabbitMQ.Send.csproj", "{EE5288D6-6D82-48FB-8F25-0D4AB5246F7F}"
 EndProject
@@ -18,6 +18,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.RoutingSend", "LearnRabbitMQ.RoutingSend\LearnRabbitMQ.RoutingSend.csproj", "{81B86AFB-1255-4D0F-BA70-2B57A1BE6FDC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.RoutingReceive", "LearnRabbitMQ.RoutingReceive\LearnRabbitMQ.RoutingReceive.csproj", "{59FA1A0E-A895-43DA-A7FC-FF884CBF7088}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.TopicsSend", "LearnRabbitMQ.TopicsSend\LearnRabbitMQ.TopicsSend.csproj", "{20076E45-AA4A-4D2D-B294-8F51DF7D6DE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.TopicsReceive", "LearnRabbitMQ.TopicsReceive\LearnRabbitMQ.TopicsReceive.csproj", "{F5F8F1D2-C756-445A-AA6B-3948082E14F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{59FA1A0E-A895-43DA-A7FC-FF884CBF7088}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59FA1A0E-A895-43DA-A7FC-FF884CBF7088}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59FA1A0E-A895-43DA-A7FC-FF884CBF7088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20076E45-AA4A-4D2D-B294-8F51DF7D6DE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20076E45-AA4A-4D2D-B294-8F51DF7D6DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20076E45-AA4A-4D2D-B294-8F51DF7D6DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20076E45-AA4A-4D2D-B294-8F51DF7D6DE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5F8F1D2-C756-445A-AA6B-3948082E14F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5F8F1D2-C756-445A-AA6B-3948082E14F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5F8F1D2-C756-445A-AA6B-3948082E14F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5F8F1D2-C756-445A-AA6B-3948082E14F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
