@@ -26,7 +26,7 @@ namespace LearnRabbitMQ.RoutingSend
                     var body =Encoding.UTF8.GetBytes( arrMsg[1]);
                     channel.BasicPublish(exchange: "direct_logs", routingKey: arrMsg[0], basicProperties: null, body: body);
 
-                    Console.WriteLine("[x] sent {0}",message);
+                    Console.WriteLine("[x] sent a message,routingkey:{0},message:{1}",arrMsg[0],arrMsg[1]);
                     Console.WriteLine("=========================");
                 }
 

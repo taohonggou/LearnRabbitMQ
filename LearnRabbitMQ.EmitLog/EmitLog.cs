@@ -17,7 +17,7 @@ namespace LearnRabbitMQ.EmitLog
                 string message = Console.ReadLine();
                 if (message == "exit")
                     return;
-                
+
                 var factory = new ConnectionFactory() { HostName = "localhost" };
                 using (var connection = factory.CreateConnection())
                 using (var channel = connection.CreateModel())
