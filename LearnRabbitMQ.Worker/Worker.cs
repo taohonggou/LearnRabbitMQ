@@ -17,11 +17,11 @@ namespace LearnRabbitMQ.Worker
             using (var channel=connection.CreateModel())
             {
                 channel.QueueDeclare(queue: "taskqueue",
-                    durable: true,
+                    durable: false,
                     exclusive: false,
                     autoDelete: false,
                     arguments: null);
-                channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
+                channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);//这个是只要当前的worker正在处理消息，queue就不会将详细发给他，会发给其他worker。
                 Console.WriteLine("[*] Waiting for messages.");
 
                 var consumer = new EventingBasicConsumer(channel);
@@ -37,7 +37,7 @@ namespace LearnRabbitMQ.Worker
 
                     Console.WriteLine("[x] Done");
 
-                    channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
+                    channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);//使用ack时必须有此代码，要不worker处理消息失败，queue在继续转发此消息时会有问题
                 };
                 channel.BasicConsume(queue: "taskqueue", noAck: false, consumer: consumer);
 
