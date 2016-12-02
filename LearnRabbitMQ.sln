@@ -23,6 +23,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.TopicsSend", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.TopicsReceive", "LearnRabbitMQ.TopicsReceive\LearnRabbitMQ.TopicsReceive.csproj", "{F5F8F1D2-C756-445A-AA6B-3948082E14F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.Practice", "LearnRabbitMQ.Practice\LearnRabbitMQ.Practice.csproj", "{F0A2D82C-64CF-408C-84FA-EBE869FFFB2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.PracticeReceive", "LearnRabbitMQ.PracticeReceive\LearnRabbitMQ.PracticeReceive.csproj", "{D61F48C1-21B0-4E82-8FEB-CF12E856446B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.Helper", "LearnRabbitMQ.Helper\LearnRabbitMQ.Helper.csproj", "{706CDB7B-D906-472B-881A-1C6076799DAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +75,18 @@ Global
 		{F5F8F1D2-C756-445A-AA6B-3948082E14F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5F8F1D2-C756-445A-AA6B-3948082E14F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5F8F1D2-C756-445A-AA6B-3948082E14F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0A2D82C-64CF-408C-84FA-EBE869FFFB2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0A2D82C-64CF-408C-84FA-EBE869FFFB2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0A2D82C-64CF-408C-84FA-EBE869FFFB2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0A2D82C-64CF-408C-84FA-EBE869FFFB2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D61F48C1-21B0-4E82-8FEB-CF12E856446B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D61F48C1-21B0-4E82-8FEB-CF12E856446B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D61F48C1-21B0-4E82-8FEB-CF12E856446B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D61F48C1-21B0-4E82-8FEB-CF12E856446B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{706CDB7B-D906-472B-881A-1C6076799DAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{706CDB7B-D906-472B-881A-1C6076799DAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{706CDB7B-D906-472B-881A-1C6076799DAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{706CDB7B-D906-472B-881A-1C6076799DAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
