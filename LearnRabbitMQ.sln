@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.PracticeRecei
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.Helper", "LearnRabbitMQ.Helper\LearnRabbitMQ.Helper.csproj", "{706CDB7B-D906-472B-881A-1C6076799DAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.UseVideo", "LearnRabbitMQ.UseVideo\LearnRabbitMQ.UseVideo.csproj", "{C5DAC4E5-C079-4346-A797-41A47E420380}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{706CDB7B-D906-472B-881A-1C6076799DAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{706CDB7B-D906-472B-881A-1C6076799DAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{706CDB7B-D906-472B-881A-1C6076799DAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5DAC4E5-C079-4346-A797-41A47E420380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5DAC4E5-C079-4346-A797-41A47E420380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5DAC4E5-C079-4346-A797-41A47E420380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5DAC4E5-C079-4346-A797-41A47E420380}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
