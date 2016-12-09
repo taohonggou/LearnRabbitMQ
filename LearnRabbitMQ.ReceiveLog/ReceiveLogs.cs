@@ -16,6 +16,7 @@ namespace LearnRabbitMQ.ReceiveLog
             using (var channel = connection.CreateModel())
             {
                 channel.ExchangeDeclare("logs", "fanout");
+                //channel.ExchangeDeclare("test",ExchangeType.Topic,)
 
                 var queueName = channel.QueueDeclare().QueueName;
 

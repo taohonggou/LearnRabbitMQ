@@ -22,7 +22,7 @@ namespace LearnRabbitMQ.EmitLog
                 using (var connection = factory.CreateConnection())
                 using (var channel = connection.CreateModel())
                 {
-                    channel.ExchangeDeclare("logs", "fanout");
+                    channel.ExchangeDeclare("logs", ExchangeType.Fanout);
 
                     var body = Encoding.UTF8.GetBytes(message);
 

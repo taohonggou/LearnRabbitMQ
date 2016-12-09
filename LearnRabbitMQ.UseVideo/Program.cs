@@ -11,6 +11,7 @@ namespace LearnRabbitMQ.UseVideo
     {
         static void Main(string[] args)
         {
+            //这里尽量不要使用guest用户，不同用户可以接受同一个队列的消息
             ConnectionFactory factory = new ConnectionFactory()
             {
                 HostName = "127.0.0.1",

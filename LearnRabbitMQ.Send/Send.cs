@@ -25,7 +25,7 @@ namespace LearnRabbiMQ.Send
                 string message = "Hello World";
                 var body = Encoding.UTF8.GetBytes(message);
 
-                channel.BasicPublish(exchange: "", routingKey: "queue", basicProperties: null, body: body);
+                channel.BasicPublish(exchange: "", routingKey: "mytest", basicProperties: null, body: body);
 
                 Console.WriteLine("[X] send {0}", message);
 
