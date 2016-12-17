@@ -11,27 +11,24 @@ namespace LearnRabbitMQ.EmitLog
     {
         public static void Main()
         {
-            while (true)
+            var factory = new ConnectionFactory() { HostName = "localhost" };
+            using (var connection = factory.CreateConnection())
+            using (var channel = connection.CreateModel())
             {
-                Console.WriteLine("输入日志内容");
-                string message = Console.ReadLine();
-                if (message == "exit")
-                    return;
+                channel.ExchangeDeclare("logs", ExchangeType.Fanout);
 
-                var factory = new ConnectionFactory() { HostName = "localhost" };
-                using (var connection = factory.CreateConnection())
-                using (var channel = connection.CreateModel())
+                while (true)
                 {
-                    channel.ExchangeDeclare("logs", ExchangeType.Fanout);
-
+                    Console.WriteLine("输入日志内容");
+                    string message = Console.ReadLine();
                     var body = Encoding.UTF8.GetBytes(message);
 
                     channel.BasicPublish(exchange: "logs", routingKey: "", basicProperties: null, body: body);
-                    Console.WriteLine("[x] sent {0}",message);
+                    Console.WriteLine("[x] sent {0}", message);
                 }
             }
 
-            
+
         }
     }
 }

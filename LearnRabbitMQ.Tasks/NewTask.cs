@@ -9,41 +9,32 @@ namespace LearnRabbitMQ.Tasks
 {
     class NewTask
     {
-        public static void Main(string[] args)
+        public static void Main(string[] args)//根据空格来区分长度
         {
-            while(true)
+            Console.WriteLine("To exit press CTRL+C");
+
+            var factory = new ConnectionFactory { HostName = "localhost" };
+            using (var connection = factory.CreateConnection())
+            using (var channel = connection.CreateModel())
             {
-                Console.WriteLine("请输入消息 exit退出");
-                string message= Console.ReadLine();
-                if (message == "exit")
-                    return;
-                var factory = new ConnectionFactory() { HostName = "localhost" };
+                channel.QueueDeclare(queue: "durable", durable: true, exclusive: false, autoDelete: false, arguments: null);//durable:队列持久化
 
-                using (var connection = factory.CreateConnection())
-                using (var channel = connection.CreateModel())
+                var properties = channel.CreateBasicProperties();
+                properties.Persistent = true;//消息持久化
+
+                string message ="NewTask Start";
+                while (true)
                 {
-                    channel.QueueDeclare(queue: "taskqueue", durable: false, exclusive: false, autoDelete: false, arguments: null);
-                    //channel.ExchangeDeclare("logs", "fanout");
-                    //var message = GetMessage(args);
-                    var body = Encoding.UTF8.GetBytes(message);
+                    if (message != null)
+                    {
+                        var body = Encoding.UTF8.GetBytes(message);
 
-                    var properties = channel.CreateBasicProperties();
-                    properties.Persistent = false;
-
-                    channel.BasicPublish(exchange: "", routingKey: "taskqueue", basicProperties: null, body: body);
-
-                    Console.WriteLine("[x] Sent {0}", message);
+                        channel.BasicPublish(exchange: "", routingKey: "durable", basicProperties: properties, body: body);
+                    }
+                    Console.WriteLine("发送了消息：{0}", message);
+                    message = Console.ReadLine();
                 }
             }
-            
-            //Console.WriteLine("Press [enter] to exit");
-            //Console.ReadLine();
-
-        }
-
-        private static string GetMessage(string [] args)
-        {
-            return args.Length > 0 ? string.Join(" ", args) : "Hello World";
         }
     }
 }

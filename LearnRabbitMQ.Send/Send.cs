@@ -1,38 +1,43 @@
 ﻿using RabbitMQ.Client;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace LearnRabbiMQ.Send
 {
     class Send
     {
+        private static readonly Uri url =new Uri( "amqp://chenliang:123@192.168.0.80:5672/");
         static void Main()
         {
-            var factory = new ConnectionFactory() { HostName = "localHost" };
+            var factory = new ConnectionFactory
+            {
+                uri = url
+                //HostName = "192.168.0.80",
+                //UserName = "chenliang",
+                //Password = "123"
+            };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                //http://www.rabbitmq.com/tutorials/tutorial-one-dotnet.html
-                channel.QueueDeclare(queue: "queue",
+                channel.QueueDeclare(queue: "HelloWorld",
                     durable: false,
                     exclusive: false,
                     autoDelete: false,
                     arguments: null
                 );
                 string message = "Hello World";
-                var body = Encoding.UTF8.GetBytes(message);
+                while (true)
+                {
+                    if (string.IsNullOrEmpty(message) || message.Equals("exit", StringComparison.OrdinalIgnoreCase))
+                        return;
+                    var body = Encoding.UTF8.GetBytes(message);
 
-                channel.BasicPublish(exchange: "", routingKey: "mytest", basicProperties: null, body: body);
+                    channel.BasicPublish(exchange: "", routingKey: "HelloWorld", basicProperties: null, body: body);
 
-                Console.WriteLine("[X] send {0}", message);
-
+                    Console.WriteLine("[X] send {0}，可以继续输入", message);
+                    message = Console.ReadLine();
+                }
             }
-
-            Console.WriteLine("Press enter to exit");
-            Console.ReadLine();
         }
     }
 }

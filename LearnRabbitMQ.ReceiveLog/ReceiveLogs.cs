@@ -11,16 +11,15 @@ namespace LearnRabbitMQ.ReceiveLog
     {
         public static void Main()
         {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
+            var factory = new ConnectionFactory { HostName = "localhost" };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
                 channel.ExchangeDeclare("logs", "fanout");
-                //channel.ExchangeDeclare("test",ExchangeType.Topic,)
 
-                var queueName = channel.QueueDeclare().QueueName;
+                var queueName = channel.QueueDeclare().QueueName;//临时队列，会自动删除
 
-                channel.QueueBind(queue: queueName,exchange: "logs", routingKey: "");
+                channel.QueueBind(queue: queueName,exchange: "logs", routingKey: "");//这里的routingkey写不写跟bind没有关系
 
                 Console.WriteLine("Waiting for logs……");
 

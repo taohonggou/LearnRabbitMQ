@@ -17,11 +17,11 @@ namespace LearnRabbitMQ.TopicsSend
             {
                 channel.ExchangeDeclare(exchange: "topic_logs", type: "topic");
 
-                string[] inputMsg=new string[2] ;
+                string[] inputMsg=new string[2];
                 string msg = "";
                 while (true)
                 {
-                    Console.WriteLine("请输入topic：msg，例如：book.english:人类简史 or computer.i5:自己组装");
+                    Console.WriteLine("请输入department.language.name:msg，例如：backstage.C#.chenliang:小伙儿干的不错 or backstage.java.mushuai:穆帅牛逼");
                     msg = Console.ReadLine();
                     inputMsg = msg.Split(':');
                     if(inputMsg.Length!=2)

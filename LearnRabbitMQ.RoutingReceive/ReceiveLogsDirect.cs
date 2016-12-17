@@ -19,6 +19,7 @@ namespace LearnRabbitMQ.RoutingReceive
                 {
                     break;
                 }
+                Console.WriteLine("输入此队列要接收的消息类型，例如：info，success，danger");
                 severity = Console.ReadLine().Split(' ');
             }
 

@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.Send", "LearnRabbitMQ.Send\LearnRabbitMQ.Send.csproj", "{EE5288D6-6D82-48FB-8F25-0D4AB5246F7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.1Send", "LearnRabbitMQ.Send\LearnRabbitMQ.1Send.csproj", "{EE5288D6-6D82-48FB-8F25-0D4AB5246F7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.Receive", "LearnRabbitMQ.Receive\LearnRabbitMQ.Receive.csproj", "{6B5997A3-76D4-4FB1-B6BA-673F73464F86}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.1Receive", "LearnRabbitMQ.Receive\LearnRabbitMQ.1Receive.csproj", "{6B5997A3-76D4-4FB1-B6BA-673F73464F86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.Tasks", "LearnRabbitMQ.Tasks\LearnRabbitMQ.Tasks.csproj", "{7F35DF86-F61E-4EB6-879F-89091EEE6D62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.2Tasks", "LearnRabbitMQ.Tasks\LearnRabbitMQ.2Tasks.csproj", "{7F35DF86-F61E-4EB6-879F-89091EEE6D62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.Worker", "LearnRabbitMQ.Worker\LearnRabbitMQ.Worker.csproj", "{48692F71-344C-4A53-A49C-261C82CFC9DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.2Worker", "LearnRabbitMQ.Worker\LearnRabbitMQ.2Worker.csproj", "{48692F71-344C-4A53-A49C-261C82CFC9DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.EmitLog", "LearnRabbitMQ.EmitLog\LearnRabbitMQ.EmitLog.csproj", "{6ED98327-CD50-4308-8628-092D97F18270}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.3EmitLog", "LearnRabbitMQ.EmitLog\LearnRabbitMQ.3EmitLog.csproj", "{6ED98327-CD50-4308-8628-092D97F18270}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.ReceiveLog", "LearnRabbitMQ.ReceiveLog\LearnRabbitMQ.ReceiveLog.csproj", "{9EF7E1DD-0424-4EE9-984F-507FB19BB847}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.3ReceiveLog", "LearnRabbitMQ.ReceiveLog\LearnRabbitMQ.3ReceiveLog.csproj", "{9EF7E1DD-0424-4EE9-984F-507FB19BB847}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.RoutingSend", "LearnRabbitMQ.RoutingSend\LearnRabbitMQ.RoutingSend.csproj", "{81B86AFB-1255-4D0F-BA70-2B57A1BE6FDC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.4RoutingSend", "LearnRabbitMQ.RoutingSend\LearnRabbitMQ.4RoutingSend.csproj", "{81B86AFB-1255-4D0F-BA70-2B57A1BE6FDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.RoutingReceive", "LearnRabbitMQ.RoutingReceive\LearnRabbitMQ.RoutingReceive.csproj", "{59FA1A0E-A895-43DA-A7FC-FF884CBF7088}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.4RoutingReceive", "LearnRabbitMQ.RoutingReceive\LearnRabbitMQ.4RoutingReceive.csproj", "{59FA1A0E-A895-43DA-A7FC-FF884CBF7088}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.TopicsSend", "LearnRabbitMQ.TopicsSend\LearnRabbitMQ.TopicsSend.csproj", "{20076E45-AA4A-4D2D-B294-8F51DF7D6DE4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.5TopicsSend", "LearnRabbitMQ.TopicsSend\LearnRabbitMQ.5TopicsSend.csproj", "{20076E45-AA4A-4D2D-B294-8F51DF7D6DE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.TopicsReceive", "LearnRabbitMQ.TopicsReceive\LearnRabbitMQ.TopicsReceive.csproj", "{F5F8F1D2-C756-445A-AA6B-3948082E14F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.5TopicsReceive", "LearnRabbitMQ.TopicsReceive\LearnRabbitMQ.5TopicsReceive.csproj", "{F5F8F1D2-C756-445A-AA6B-3948082E14F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.Practice", "LearnRabbitMQ.Practice\LearnRabbitMQ.Practice.csproj", "{F0A2D82C-64CF-408C-84FA-EBE869FFFB2E}"
 EndProject

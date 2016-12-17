@@ -21,12 +21,15 @@ namespace LearnRabbitMQ.TopicsReceive
 
                 if (args.Length < 1)
                 {
-                    Console.Error.WriteLine("Usage: {0} [binding_key...]",
-                                            Environment.GetCommandLineArgs()[0]);
-                    Console.WriteLine(" Press [enter] to exit.");
-                    Console.ReadLine();
-                    Environment.ExitCode = 1;
-                    return;
+                    Console.WriteLine("输入bindingkey，例如：backstage.C#.chenliang:小伙儿干的不错");
+                    //Console.Error.WriteLine("Usage: {0} [binding_key...]",
+                    //                        Environment.GetCommandLineArgs()[0]);
+                    //Console.WriteLine(" Press [enter] to exit.");
+                    //Console.ReadLine();
+                    //Environment.ExitCode = 1;
+                    string bindingkey = Console.ReadLine();
+                    args = bindingkey.Split(new[] {" "}, StringSplitOptions.RemoveEmptyEntries);
+                    //return;
                 }
 
                 foreach (var bindingKey in args)
