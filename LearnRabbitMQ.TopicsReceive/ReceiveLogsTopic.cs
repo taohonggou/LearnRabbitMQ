@@ -16,12 +16,14 @@ namespace LearnRabbitMQ.TopicsReceive
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                channel.ExchangeDeclare(exchange: "topic_logs", type: "topic");
-                var queueName = channel.QueueDeclare().QueueName;
+                channel.ExchangeDeclare(exchange: "topic_logs1", type: "topic");
+                channel.ExchangeDeclare(exchange: "topic_logs2", type: "topic");
 
+                //var queueName = channel.QueueDeclare().QueueName;
+                var queueName = channel.QueueDeclare("test#",false,false,false,null).QueueName;
                 if (args.Length < 1)
                 {
-                    Console.WriteLine("输入bindingkey，例如：backstage.C#.chenliang:小伙儿干的不错");
+                    Console.WriteLine("输入bindingkey，例如：backstage.C#.chenliang");
                     //Console.Error.WriteLine("Usage: {0} [binding_key...]",
                     //                        Environment.GetCommandLineArgs()[0]);
                     //Console.WriteLine(" Press [enter] to exit.");
@@ -35,8 +37,11 @@ namespace LearnRabbitMQ.TopicsReceive
                 foreach (var bindingKey in args)
                 {
                     channel.QueueBind(queue: queueName,
-                                      exchange: "topic_logs",
+                                      exchange: "topic_logs1",
                                       routingKey: bindingKey);
+                    channel.QueueBind(queue: queueName,
+                                    exchange: "topic_logs2",
+                                    routingKey: bindingKey);
                 }
 
                 Console.WriteLine(" [*] Waiting for messages. To exit press CTRL+C");
