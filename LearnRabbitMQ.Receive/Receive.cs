@@ -28,7 +28,7 @@ namespace LearnRabbitMQ.Receive
                     var message = Encoding.UTF8.GetString(body);
                     Console.WriteLine("[X] received {0}", message);
                 };
-                channel.BasicConsume(queue: "HelloWorld", noAck: true, consumer: consumer);
+                channel.BasicConsume(queue: "HelloWorld1", noAck: true, consumer: consumer);
                 Console.WriteLine("Press [enter] to exit");
                 Console.ReadLine();
             }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace LearnRabbitMQ.TopicsSend
             using (var channel = connection.CreateModel())
             {
                 channel.ExchangeDeclare(exchange: "topic_logs1", type: "topic");
-                channel.ExchangeDeclare(exchange: "topic_logs2", type: "topic");
+                //channel.ExchangeDeclare(exchange: "topic_logs2", type: "topic");
                 string[] inputMsg=new string[2];
                 string msg = "";
                 while (true)
@@ -31,7 +32,7 @@ namespace LearnRabbitMQ.TopicsSend
                     }
                     var body = Encoding.UTF8.GetBytes(inputMsg[1]);
                     channel.BasicPublish(exchange: "topic_logs1", routingKey: inputMsg[0], basicProperties: null, body: body);
-                    channel.BasicPublish(exchange: "topic_logs2", routingKey: inputMsg[0], basicProperties: null, body: body);
+                    //channel.BasicPublish(exchange: "topic_logs2", routingKey: inputMsg[0], basicProperties: null, body: body);
                     Console.WriteLine("[x] sent a message:{0}", msg);
                     Console.WriteLine("================================");
                 }

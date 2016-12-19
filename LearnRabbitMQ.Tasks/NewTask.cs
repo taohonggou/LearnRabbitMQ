@@ -17,7 +17,7 @@ namespace LearnRabbitMQ.Tasks
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                channel.QueueDeclare(queue: "durable", durable: true, exclusive: false, autoDelete: false, arguments: null);//durable:队列持久化
+                channel.QueueDeclare(queue: "durable1", durable: true, exclusive: false, autoDelete: false, arguments: null);//durable:队列持久化
 
                 var properties = channel.CreateBasicProperties();
                 properties.Persistent = true;//消息持久化
@@ -29,7 +29,7 @@ namespace LearnRabbitMQ.Tasks
                     {
                         var body = Encoding.UTF8.GetBytes(message);
 
-                        channel.BasicPublish(exchange: "", routingKey: "durable", basicProperties: properties, body: body);
+                        channel.BasicPublish(exchange: "", routingKey: "durable1", basicProperties: properties, body: body);
                     }
                     Console.WriteLine("发送了消息：{0}", message);
                     message = Console.ReadLine();

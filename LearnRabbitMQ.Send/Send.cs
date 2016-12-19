@@ -32,7 +32,7 @@ namespace LearnRabbiMQ.Send
                         return;
                     var body = Encoding.UTF8.GetBytes(message);
 
-                    channel.BasicPublish(exchange: "", routingKey: "HelloWorld", basicProperties: null, body: body);
+                    channel.BasicPublish(exchange: "", routingKey: "HelloWorld1", basicProperties: null, body: body);
 
                     Console.WriteLine("[X] send {0}，可以继续输入", message);
                     message = Console.ReadLine();
