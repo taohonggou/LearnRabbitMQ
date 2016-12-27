@@ -20,6 +20,7 @@ namespace LearnRabbitMQ.Helper
             {
                 channel.ExchangeDeclare(exchange: "directExchange", type: "direct");
                 string queueName = channel.QueueDeclare().QueueName;
+                
                 //channel.QueueDeclare(queue:"")
 
                 //while (true)

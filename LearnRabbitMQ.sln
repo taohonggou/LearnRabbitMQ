@@ -41,7 +41,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.7RPCServer", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.7RPCClient", "LearnRabbitMQ.7RPCClient\LearnRabbitMQ.7RPCClient.csproj", "{D50ECD30-E534-4E0E-893E-D03FE4B7D90C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ,.RPCClient", "LearnRabbitMQ,.RPCClient\LearnRabbitMQ,.RPCClient.csproj", "{908C3C10-05DA-4976-A80D-693C320A5CB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.RPCClient", "LearnRabbitMQ,.RPCClient\LearnRabbitMQ.RPCClient.csproj", "{908C3C10-05DA-4976-A80D-693C320A5CB7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnRabbitMQ.RPCServer", "LearnRabbitMQ.RPCServer\LearnRabbitMQ.RPCServer.csproj", "{D0BE2AFD-6453-4CB8-9FF1-BFA9F3859EB5}"
 EndProject

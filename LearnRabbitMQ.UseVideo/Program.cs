@@ -15,8 +15,8 @@ namespace LearnRabbitMQ.UseVideo
             ConnectionFactory factory = new ConnectionFactory()
             {
                 HostName = "127.0.0.1",
-                UserName = "datamip",
-                Password = "123"
+                UserName = "chenliang",
+                Password = "123456"
             };
             //创建connection
             var connection = factory.CreateConnection();
@@ -25,7 +25,11 @@ namespace LearnRabbitMQ.UseVideo
             var channel = connection.CreateModel();
             //exchange的默认type是direct
             //创建队列queue
-            channel.QueueDeclare("mytest", true, false, false, null);
+            channel.QueueDeclare("mytest", false, true, false, null);
+
+           var result=  channel.QueueDeclarePassive("mytest");
+
+            //channel.QueueDeclareNoWait()
             //发布消息
             var message = Encoding.UTF8.GetBytes("Hello World!");
             channel.BasicPublish(exchange: "", routingKey: "mytest", basicProperties: null, body: message);
